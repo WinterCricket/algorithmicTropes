@@ -7,7 +7,25 @@
 <body>
 
 	<script>
-		function diffArray(arr1, arr2) {
+		//intersection, or overlapping in arrays
+
+function compare(arr1, arr2) {
+const newArray = [];
+  arr1.forEach((e1)=>arr2.forEach((e2)=>
+                                  {if(e1 === e2){
+                                    newArray.push(e1)
+                                  }
+                                  }
+                           ));
+  return newArray
+}
+
+compare([1,2,3,5], [1,2,3,4,5]);
+
+
+//differences between arrays
+
+function diffArray(arr1, arr2) {
 			let newArr = arr1.concat(arr2);
   // use filter method
   return newArr.filter(function(num){
@@ -20,7 +38,8 @@
 
 
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray(["1", "2", "3", "5", "mouse"], ["1", "2", "3", "4", "5"]);
+
 </script>
 
 </body>
