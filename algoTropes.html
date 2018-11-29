@@ -12,18 +12,16 @@
 var arr = [];
   // Only change code below this line
   
-arr.push(collection.find(person => person.last === source.last));
+var object = collection.find(person => person.last === source.last || person.first === source.first);
   
-  
+ arr.push(object); 
   // Only change code above this line
  return arr;
 }
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, 
                { first: "Mercutio", last: null }, 
-               { first: "Tybalt", last: "Capulet" }], { last: null});
-
-
+               { first: "Tybalt", last: "Capulet" }],  {last: "Capulet"}, {last: null});
 
 
 	</script>
