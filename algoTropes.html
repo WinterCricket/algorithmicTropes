@@ -9,10 +9,10 @@
 	<script>
 		function whatIsInAName(collection, source) {
   // What's in a name?
-
+var arr = [];
   // Only change code below this line
   
-const arr = collection.find(person => person.last === source.last);
+arr.push(collection.find(person => person.last === source.last));
   
   
   // Only change code above this line
@@ -21,7 +21,8 @@ const arr = collection.find(person => person.last === source.last);
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, 
                { first: "Mercutio", last: null }, 
-               { first: "Tybalt", last: "Capulet" }], { last: "Montague" });
+               { first: "Tybalt", last: "Capulet" }], { last: null});
+
 
 
 
