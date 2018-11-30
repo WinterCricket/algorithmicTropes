@@ -10,8 +10,9 @@
 		function spinalCase(str) {
   
   
-  str = str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
-   return str = str.replace(/\s/g, "-");
+ str = str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
+ 
+  return str = str.replace(/[\W_]+/g,"-");
 }
 
 spinalCase('This IsSpinal Tap');
