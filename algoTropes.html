@@ -7,25 +7,18 @@
 <body>
 
 	<script>
-		function whatIsInAName(collection, source) {
+		function spinalCase(str) {
   
-  var arr = collection.filter(function(item){
-  	//use filter to return boolean
-    for(var i in source){
-      //check values in source and check against item
-      if(source[i] !== item[i]){
-      return false;
-      }
-    }
-    return true;
-  });
-return arr
+  
+  str = str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
+   return str = str.replace(/\s/g, "-");
 }
 
+spinalCase('This IsSpinal Tap');
 // test here
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], {last: "Capulet"});
 
-	</script>
+
+</script>
 
 </body>
 </html>
