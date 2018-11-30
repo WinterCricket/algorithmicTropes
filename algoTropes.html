@@ -8,8 +8,8 @@
 
 	<script>
 		function translatePigLatin(str) {
-			
-			
+
+
 			if(str[0] === "c"){
 				return str.concat("c" + "ay");
 			}
@@ -20,6 +20,16 @@
 // test here
 
 
+</script>
+<script>
+	function translatePigLatin(str) {
+  
+str = str.replace(/ /g, " ").split(""); 
+ 
+
+return str;
+}
+translatePigLatin("consonant");//array of substring letters
 </script>
 
 </body>
