@@ -8,29 +8,20 @@
 
 	<script>
 		function translatePigLatin(str) {
-
-
+			
+			str = str.replace(/ /g, " ").split(""); 
+			
 			if(str[0] === "c"){
+				str = str.join("");
 				return str.concat("c" + "ay");
 			}
+			str = str.join("");
 			return str.concat("way");
 		}
 
-		translatePigLatin("consonant");
-// test here
 
-
-</script>
-<script>
-	function translatePigLatin(str) {
-  
-str = str.replace(/ /g, " ").split(""); 
- 
-
-return str;
-}
-translatePigLatin("consonant");//array of substring letters
-</script>
+		translatePigLatin("cogy");
+	</script>
 
 </body>
 </html>
