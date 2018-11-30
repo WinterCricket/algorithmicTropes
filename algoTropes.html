@@ -7,15 +7,16 @@
 <body>
 
 	<script>
-		function spinalCase(str) {
-  
-  
- str = str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
- 
-  return str = str.replace(/[\W_]+/g,"-");
-}
+		function translatePigLatin(str) {
+			
+			
+			if(str[0] === "c"){
+				return str.concat("fee");
+			}
+			return str.concat("way");
+		}
 
-spinalCase('This IsSpinal Tap');
+		translatePigLatin("consonant");
 // test here
 
 
