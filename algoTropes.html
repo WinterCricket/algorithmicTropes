@@ -13,17 +13,17 @@
 			
 			if(/^[aeiou]$/.test(str[0])){
 				
-				str = str.concat("ay");
+				str = str.concat("way");
 				return str.join("");
-				
+
 			}
 			var originalArr = str;
 			str = str.shift();
 			originalArr = originalArr.join("")
 			str = originalArr.concat( str[0], "ay");
-			
-			
-			
+
+
+
 			return str;
 		}
 
