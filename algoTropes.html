@@ -15,12 +15,18 @@
 				str = str.join("");
 				return str.concat("c" + "ay");
 			}
-			str = str.join("");
-			return str.concat("way");
+  		var originalArr = str;
+  		str = str.shift();
+			originalArr = originalArr.join("")
+			str = originalArr.concat( str[0], "ay").toLowerCase();
+  		
+  		
+  	
+  		return str;
 		}
 
 
-		translatePigLatin("cogy");
+		translatePigLatin("Harry");
 	</script>
 
 </body>
