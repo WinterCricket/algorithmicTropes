@@ -9,24 +9,29 @@
 	<script>
 		function translatePigLatin(str) {
 			
-			str = str.replace(/ /g, " ").split(""); 
+			str = str.replace(/ /g, " ").toLowerCase().split(""); 
 			
-			if(str[0] === "c"){
-				str = str.join("");
-				return str.concat("c" + "ay");
+			if(/^[aeiou]$/.test(str[0])){
+				
+				str = str.concat("ay");
+				return str.join("");
+				
 			}
-  		var originalArr = str;
-  		str = str.shift();
+			var originalArr = str;
+			str = str.shift();
 			originalArr = originalArr.join("")
-			str = originalArr.concat( str[0], "ay").toLowerCase();
-  		
-  		
-  	
-  		return str;
+			str = originalArr.concat( str[0], "ay");
+			
+			
+			
+			return str;
 		}
 
 
 		translatePigLatin("Harry");
+		translatePigLatin("Oliver");
+		translatePigLatin("Davis");
+
 	</script>
 
 </body>
