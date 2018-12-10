@@ -9,30 +9,32 @@
 	<script>
 		function translatePigLatin(str) {
   
-  var pigLatin = '';
+  var pigLatin = "";
   var regex = /[aeiou]/gi;
 
-  
+ 
   if (str[0].match(regex)) {
-    pigLatin = str + 'way';
+    pigLatin = str + "way";
 
+  } else 
+
+    if (str.match(regex)){
+    var vowelIndex= str.indexOf(str.match(regex)[0])
+    
+    pigLatin = str.substr(vowelIndex) + str.substr(0, vowelIndex) + "ay";
   } else {
-
-    
-    var vowelIndice = str.indexOf(str.match(regex)[0]);
-
-    
-    pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + 'ay';
+  
+  pigLatin = str + "ay";
   }
 
-  return pigLatin;
+  return pigLatin.toLowerCase();
 }
 
 
 		translatePigLatin("Harry");
 		translatePigLatin("Oliver");
 		translatePigLatin("Davis");
-translatePigLatin("Throw");
+translatePigLatin("Thy");
 
 
 	</script>
