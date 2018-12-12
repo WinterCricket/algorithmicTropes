@@ -20,6 +20,18 @@
 	return newItem;
 }
 myReplace("The house of Windsor is slow", "Windsor", "harry is quick and long");
+
+//create a change letter function
+function changeLetter(word){
+	var newLetter = word[0].toUpperCase();
+  var arrayStr = word.split("");
+arrayStr.shift();
+  return newLetter + arrayStr.join("");
+  
+  
+  
+} 
+changeLetter("lowclass lass")
 	</script>
 
 </body>
