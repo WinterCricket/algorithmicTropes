@@ -8,11 +8,18 @@
 
 	<script>
 		function myReplace(str, before, after) {
-  var newThing = str.replace(before, after);
-  return newThing;
-}
+  var regex = /^A-Z/;
+	if(regex.test(before[0])){
+    var capital = after[0].toUpperCase();
+  	after = capital + after.shift();
+    var newItem = str.replace(before, after)
+     }else {
+			var newItem = str.replace(before, after);
 
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+}
+	return newItem;
+}
+myReplace("The house of Windsor is slow", "Windsor", "harry is quick and long");
 	</script>
 
 </body>
