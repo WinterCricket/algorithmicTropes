@@ -13,15 +13,17 @@
 			if(regexp.test(before)){
 				return str.replace(before, after);
 				
-			}else {
-				var newLetter = after[0].toUpperCase();
-				var arrayAfter = after.split("");
-				arrayAfter.shift("");
-				return str.replace(before, newLetter + arrayAfter.join(""));
 			}
+			var newLetter = after[0].toUpperCase();
+			var arrayAfter = after.split("");
+			arrayAfter.shift("");
+			var newAfter = newLetter +arrayAfter.join("");
+			return str.replace(before, newAfter);
+
 			
 		}
 		myReplace("The house of Windsor is slow", "Windsor is slow", "harry is quick and long");
+
 
 	</script>
 
