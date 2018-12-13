@@ -7,21 +7,22 @@
 <body>
 
 	<script>
-		ffunction myReplace(str, before, after) {
-			var regexp = /^[A-Z]/;
+		function myReplace(str, before, after) {
+			var regexp = /^[a-z]/;
+			
 			if(regexp.test(before)){
-				var newLetter = after[0].toUpperCase();
-				var arrayStr = after.split("");
-				arrayStr.shift();
-				newItem = newLetter + arrayStr.join("");
-				return str.replace(before, newItem)
+				return str.replace(before, after);
+				
 			}else {
-				var newItem = str.replace(before, after);
-
+				var newLetter = after[0].toUpperCase();
+				var arrayAfter = after.split("");
+				arrayAfter.shift("");
+				return str.replace(before, newLetter + arrayAfter.join(""));
 			}
-			return newItem;
+			
 		}
 		myReplace("The house of Windsor is slow", "Windsor is slow", "harry is quick and long");
+
 	</script>
 
 </body>
