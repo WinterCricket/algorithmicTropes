@@ -7,31 +7,21 @@
 <body>
 
 	<script>
-		function myReplace(str, before, after) {
-  var regexp = /^A-Z/;
-	if(regexp.test(before)){
-    var capital = after[0].toUpperCase();
-  	after = capital + after.shift();
-    var newItem = str.replace(before, after)
-     }else {
-			var newItem = str.replace(before, after);
+		ffunction myReplace(str, before, after) {
+			var regexp = /^[A-Z]/;
+			if(regexp.test(before)){
+				var newLetter = after[0].toUpperCase();
+				var arrayStr = after.split("");
+				arrayStr.shift();
+				newItem = newLetter + arrayStr.join("");
+				return str.replace(before, newItem)
+			}else {
+				var newItem = str.replace(before, after);
 
-}
-	return newItem;
-}
-myReplace("The house of Windsor is slow", "Windsor", "harry is quick and long");
-
-//create a change letter function
-function changeLetter(word){
-	var newLetter = word[0].toUpperCase();
-  var arrayStr = word.split("");
-arrayStr.shift();
-  return newLetter + arrayStr.join("");
-  
-  
-  
-} 
-changeLetter("lowclass lass")
+			}
+			return newItem;
+		}
+		myReplace("The house of Windsor is slow", "Windsor is slow", "harry is quick and long");
 	</script>
 
 </body>
