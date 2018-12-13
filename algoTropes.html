@@ -7,31 +7,32 @@
 <body>
 
 	<script>
-		function pairElement(arr, size) {
+		function pairElement(str, size) {
   // Break it up.
   let i = 0;
- 
-  let tempArr = [];
-    if(arr[i] === "A"){ tempArr.push("A", "T")};
-  	if(arr[i] === "T"){ tempArr.push("T", "A")};
-  	if(arr[i] === "C"){ tempArr.push("C", "G")};
-  	if(arr[i] === "G"){ tempArr.push("G", "C")};
   
-    
-    for (i = 0; i < arr.length; i += size) {
-       let monkChunk = arr.slice(i, i + size);
-       
-        tempArr.push(monkChunk);
-    }
+  var tempArr = [];
+  var arr = str.split("");
+  if(arr[i] === "A"){ tempArr.push("A", "T")};
+  if(arr[i] === "T"){ tempArr.push("T", "A")};
+  if(arr[i] === "C"){ tempArr.push("C", "G")};
+  if(arr[i] === "G"){ tempArr.push("G", "C")};
+  
+  
+  for (i = 0; i < arr.length; i += size) {
+  	let monkChunk = arr.slice(i, i + size);
+  	
+  	tempArr.push(monkChunk);
+  }
 
-    return tempArr;
+  return tempArr;
 
 }
 
-chunkArrayInGroups(["G"], 2);
+pairElement("cta", 2);
 
 
-	</script>
+</script>
 
 </body>
 </html>
