@@ -8,8 +8,8 @@
 
 	<script>
 		function myReplace(str, before, after) {
-  var regex = /^A-Z/;
-	if(regex.test(before[0])){
+  var regexp = /^A-Z/;
+	if(regexp.test(before)){
     var capital = after[0].toUpperCase();
   	after = capital + after.shift();
     var newItem = str.replace(before, after)
