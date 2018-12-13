@@ -11,23 +11,23 @@
   // Break it up.
   
   let i = 0;
-  
+
   
   var tempArr = [];
   var arr = str.split(""); 
   var size = arr.length -1;
-  
+
   for (i = 0; i < arr.length; i += size-1) {
-  	
-  	
-  	
+
+
+
   	if(arr[i] === "A"){tempArr.push( [arr[i],"T"])} 
   		if(arr[i] === "T"){ tempArr.push([arr[i], "A"])} 
   			if(arr[i] === "C"){ tempArr.push([arr[i], "G"])}
   				if(arr[i] === "G"){ tempArr.push([arr[i], "C"])}
-  					
-  					
-  					
+
+
+
   			}
 
   		return tempArr;
@@ -37,7 +37,7 @@
   	pairElement("GTC");
 
 
-  	pairElement("GTC", 2);
+ 
 
 
 
