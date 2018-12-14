@@ -7,41 +7,32 @@
 <body>
 
 	<script>
-		function pairElement(str, size) {
+		function pairElement(arr, size) {
   // Break it up.
+  var group = [];
   
-  let i = 0;
-
+  var size = 1;
   
-  var tempArr = [];
-  var arr = str.split(""); 
-  var size = arr.length -1;
+  for(var i = 0; i < arr.length; i += size){
+  	if(arr[i] === "A"){group.push(["A","T"]);
+  }
+  if(arr[i] === "T"){group.push(["T","A"]);
+}
+if(arr[i] === "C"){group.push(["C","G"]);
+}
+if(arr[i] === "G"){group.push(["G","C"]);
+}
+}
 
-  for (i = 0; i < arr.length; i += size-1) {
-
-
-
-  	if(arr[i] === "A"){tempArr.push( [arr[i],"T"])} 
-  		if(arr[i] === "T"){ tempArr.push([arr[i], "A"])} 
-  			if(arr[i] === "C"){ tempArr.push([arr[i], "G"])}
-  				if(arr[i] === "G"){ tempArr.push([arr[i], "C"])}
-
-
-
-  			}
-
-  		return tempArr;
-
-  	}
-
-  	pairElement("GTC");
-
-
- 
+return group;
+}
+pairElement("GTAG")
 
 
 
-  </script>
+
+
+</script>
 
 </body>
 </html>
