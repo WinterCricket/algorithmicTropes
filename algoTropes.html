@@ -8,31 +8,35 @@
 
 	<script>
 		function pairElement(arr, size) {
-  // Break it up.
-  var group = [];
-  
-  var size = 1;
-  
-  for(var i = 0; i < arr.length; i += size){
-  	if(arr[i] === "A"){group.push(["A","T"]);
-  }
-  if(arr[i] === "T"){group.push(["T","A"]);
-}
-if(arr[i] === "C"){group.push(["C","G"]);
-}
-if(arr[i] === "G"){group.push(["G","C"]);
-}
-}
 
-return group;
-}
-pairElement("GTAG")
+			var group = [];
+
+			var size = 1;
+
+			for(var i = 0; i < arr.length; i += size){
+				if(arr[i] === "A"){
+					group.push(["A","T"]);
+				}
+				if(arr[i] === "T"){
+					group.push(["T","A"]);
+				}
+				if(arr[i] === "C"){
+					group.push(["C","G"]);
+				}
+				if(arr[i] === "G"){
+					group.push(["G","C"]);
+				}
+			}
+
+			return group;
+		}
+		pairElement("GTAG")
 
 
 
 
 
-</script>
+	</script>
 
 </body>
 </html>
